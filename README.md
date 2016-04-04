@@ -1,6 +1,6 @@
 # space-lander-site
 
-[Website](elecanisms.olin.edu/2016/lander) for Space Origin: X Elecanisms team.
+[Website](http://elecanisms.olin.edu/2016/lander) for Space Origin: X Elecanisms team.
 
 ## Serving Locally
 
