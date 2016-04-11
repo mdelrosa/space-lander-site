@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>SO:X | Documentation</title>
+		<title>SO:X | Control</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -43,8 +43,8 @@
 					<section id="wrapper">
 						<header>
 							<div id="banner" class="inner">
-								<h2>Documentation</h2>
-								<p>For future astronauts.</p>
+								<h2>Control</h2>
+								<p>Feedback is your friend. -Kent Lundberg</p>
 							</div>
 						</header>
 
@@ -52,38 +52,37 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Subsystems</h3>
-									<p>Our game includes mechanical, electrical, and software subsystems which are described below.</p>
+									<h2 class="major">Overview</h3>
+									<p>In order to replicate (somewhat) realistic rocket-physics, it was necessary to implement a control scheme that governs the speed of the rocket's actuators. The speed of the x and y axes of the rocket gantry is determined based on a simple kinematic model where two forces act on the rocket: gravity and thrust. Thrust is applied downward along the rocket's longitudinal axis, and gravity acts in the negative y-axis.</p>
+									<p>The motor's speed is proportional to a PWM duty cycle. We characterized the deadband of the motor by controlling and monitoring its speed over vendor requests.</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
-
-									<section class="features">
+									<!-- <section class="features">
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3 class="major">Actuation</h3>
 											<p>Motors for days.</p>
-											<a href="documentation.html" class="special">Coming soon</a>
+											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
 											<h3 class="major">Mechanical Design</h3>
 											<p>Gantry design.</p>
-											<a href="documentation.html" class="special">Coming soon</a>
+											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="control.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
 											<h3 class="major">Control</h3>
 											<p>Making motors behave.</p>
-											<a href="control.html" class="special">Learn more</a>
+											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
 											<h3 class="major">Communications</h3>
 											<p>PIC to PIC interfacing.</p>
-											<a href="documentation.html" class="special">Coming soon</a>
+											<a href="#" class="special">Learn more</a>
 										</article>
 									</section>
-
+ -->
 								</div>
 							</div>
 
@@ -94,7 +93,6 @@
 						<div class="inner">
 							<ul class="center icons">
 								<li><a class="icon fa-github" href="https://github.com/RyanEggert/space-lander"></a></li>
-							</ul>
 							<ul class="copyright">
 								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
