@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
-    Solid State by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Solid State by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
     <head>
@@ -15,75 +15,77 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     </head>
     <body>
-
         <!-- Page Wrapper -->
-            <div id="page-wrapper">
-
-                <!-- Header -->
-                    <header id="header">
-                        <h1><a href="index.html">SO:X</a></h1>
-                        <nav>
-                            <a href="#menu">Menu</a>
-                        </nav>
-                    </header>
-
-                <!-- Menu -->
-                    <nav id="menu">
-                        <div class="inner">
-                            <h2>Menu</h2>
-                            <ul class="links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="documentation.html">Documentation</a></li>
-                            </ul>
-                            <a href="#" class="close">Close</a>
-                        </div>
-                    </nav>
-
-                <!-- Wrapper -->
-                    <section id="wrapper">
-                        <header>
-                            <div id="banner" class="inner">
-                                <h2>Communications</h2>
-                                <p>"Ground Control to Major Tom..." -David Bowie</p>
-                            </div>
-                        </header>
-
-                        <!-- Content -->
-                            <div class="wrapper">
-                                <div class="inner">
-
-                                    <h2 class="major">Overview</h2>
-                                    <p>We looked at using one of three communications protocols for formalizing our inter-PIC communications: SPI, I2C, and UART. Each would need to be bidirectional, use as few pins as possible, and ideally have some measure of hardware support on our PIC microcontrollers.</p>
-
-                                    <h2 class="major">SPI</h2>
-                                    <p>Serial Peripheral Interface [SPI] uses 3 + n wires to communicate among n - 1 devices. SPI is fairly straightforward, having the advantage of speed. SPI typically follows a single-master, multiple-slave topology, which means that.</p>
-
-\
-                                </div>
-                            </div>
-
-                    </section>
-
-                <!-- Footer -->
-                    <section id="footer">
-                        <div class="inner">
-                            <ul class="center icons">
-                                <li><a class="icon fa-github" href="https://github.com/RyanEggert/space-lander"></a></li>
-                            <ul class="copyright">
-                                <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-                    </section>
-
+        <div id="page-wrapper">
+            <!-- Header -->
+            <header id="header">
+                <h1><a href="index.html">SO:X</a></h1>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <div class="inner">
+                    <h2>Menu</h2>
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                </div>
+            </nav>
+            <!-- Wrapper -->
+            <section id="wrapper">
+                <header>
+                    <div id="banner" class="inner">
+                        <h2>Communications</h2>
+                        <p>"Ground Control to Major Tom..." -David Bowie</p>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="wrapper">
+                    <div class="inner">
+                        <h2 class="major">Overview</h2>
+                        <p>We looked at using one of three communications protocols for formalizing our inter-PIC communications: SPI, I2C, and UART. Each would need to be bidirectional, use as few pins as possible, and ideally have some measure of hardware support on our PIC microcontrollers.</p>
+                        <h2 class="major">SPI</h2>
+                        <img class="image right" src="images/comms_spi_example.jpg" align="right" title="source: http://www.corelis.com/images/screenshots/spi-multipleslaves.jpg">
+                        <p>Serial Peripheral Interface [SPI] uses at least 4 wires to communicate between devices. SPI is fairly straightforward, holding a significant speed advantage over the other considered protocols. SPI typically follows a single-master, multiple-slave topology, which means that any communication from a slave device to the master device must be initiated by the master device.</p>
+                        <p>Our PIC microcontrollers have <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/39699b.pdf" title="PIC24F FRM | SPI">a native SPI module</a> which supports both master and slave operation. From a software perspective, in order to use SPI, we would need to modify our existing SPI module wrapper library to support configuration and operation in slave mode. </p>
+                        <h2 class="major">I2C</h2>
+                        <img class="image left" src="images/comms_i2c_example.jpg" align="right" title="source: http://www.prodigytechno.com/blog/wp-content/uploads/2011/12/I2C_Bus_Topology.jpg">
+                        <p>
+                        The Inter-Integrated Circuit [I2C] protocol communicates from a master device to a large number of addressed slave devices. I2C is generally slower and more complicated than either SPI or UART. It, however, uses only two communication wires--a clock line and a data line--to communicate with hundreds of slave devices. I2C also specifies bits for acknowledging and not acknowledging transmissions and indicating the read/write nature of transmitted operations.
+                        </p>
+                        <p>
+                        Similar to SPI, the master device controls the clock, and 
+                        </p>
+                        <h2 class="major">UART</h2>
+                        <p>
+                        </p>
+                        <h2 class="major">Implementation</h2>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer">
+                <div class="inner">
+                    <ul class="center icons">
+                        <li><a class="icon fa-github" href="https://github.com/RyanEggert/space-lander"></a></li>
+                        <ul class="copyright">
+                            <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-
-        <!-- Scripts -->
+            <!-- Scripts -->
             <script src="assets/js/skel.min.js"></script>
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/jquery.scrollex.min.js"></script>
             <script src="assets/js/util.js"></script>
             <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
             <script src="assets/js/main.js"></script>
-
-    </body>
-</html>
+        </body>
+    </html>
