@@ -325,47 +325,142 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</section> -->
 
 									<section>
-										<h3 class="major">Block Diagram</h3>
-										<div class="box alt">
+										<!-- <div class=""> -->
+										<h2 class="major">Introduction</h2>
+											<img class="image left" src="images/MDIAGRAM1.png">
+											<p><!-- <span class="image left"><img src="images/pic01.jpg" alt="" /></span> -->Much of the challenge in creating Space Origin: X was found in transforming the software model of a flying rocket into a controlled mechanical space. The core gameplay of Space Origin: X revolves around translating a rocket across a large two dimensional space, with a third degree of freedom of rocket rotation. Given the desired size of the game, this vertical gantry needed to translate the rocket across an area roughly four feet tall by three feet wide, with 90 degrees of rocket rotation in either direction. The mechanical system further serves as a platform for the electronics, integrating the power supply, microcontrollers, LEDs, wiring, and other essential electrical features in one compact package. As inspired by Elon Musk and SpaceX, our rocket lands on a floating barge rather than Lunar Lander’s traditional moon. This barge is replicated with a single degree of freedom moving platform capable of sensing rocket impact across its full travel. To create the interactive gaming experience of a lifetime, the team tied together the various mechanical and electrical components in a stylized game cabinet, inspired by the “wooden box” aesthetic popularized by warehouses worldwide.</p>
+											
+										<!-- </div> -->
+										<!-- </div> -->
+										<br>
+										<!-- <div class=""> -->
+										<h2 class="major">Vertical Motion</h2>
+<!-- 										<div class="box alt">
 											<div class="row uniform">
-												<div class="12u$"><span class="image fit"><img src="images/bg.jpg" alt="" /></span></div>
-<!-- 												<div class="4u"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="4u$"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-												<div class="4u$"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="4u$"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div> -->
+												
+												<div class="5u"></div>
+												<div class="4u"><span class="image fit"><img src="images/PRO1.jpg" alt="" /></span></div>
+												<div class="3u"><span class="image fit"><img src="images/PRO2.jpg" alt="" /></span></div>
+											</div>
+										</div> -->
+										<div class="row uniform">
+											<div class="9u">
+											<p>The greatest mechanical challenge in Space Origin: X, the mechanical system for vertical rocket motion proceeded through several iterations before the final designs were chosen. Immediate design requirements identified for the system included vertical travel speed, rigidity, and load capacity. To promote the gameplay we wanted, the rocket needed to be capable of falling at significant speeds, necessitating components that could provide quick linear motion. However, given our limited budget and size constraints, any moving vertical system would need to be lightweight for ease of motion. With a single actuator at one end of the gantry providing all power for the system, added resistance across the four feet of travel would make moving the rocket up and down especially difficult. Finally, motion needed to remain rigidly confined and smooth across the full travel of the system, particularly near the barge. Irregular motion would eliminate immersiveness in the game, highlighting mechanical flaws instead of enveloping players in the Space Origin: X universe. Furthermore, the win condition and core gameplay relies on fine control of rocket position, landing it at a specified angle and velocity. A wobbly system would cause inconsistent gameplay when landing, forcing unfair losses or granting undeserved wins, ruining the player experience.</p>
+											</div>
+											<div class="3u"><img class="image fit" src="images/PRO2.jpg" alt="Initial prototypes for vertical gantry"></div>
+										</div>
+										<br>
+										<div class="row uniform">
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/DC1.jpg" alt="DC Motor"></div>
+												<div class="12u"><img class="image fit" src="images/NEMA1.jpg" alt="NEMA17 Stepper Motor"></div>
+											</div>
+											<div class="8u">
+												<p>With an initial supply of small NEMA 17 stepper motors, we ran quick calculations to identify maximum speed and carrying capacities, but found that our stepper would not be sufficient for the speed of motion desired. We quickly identified a DC motor as the easiest option to balance cost with performance, easily producing the speeds needed to drive the rocket vertically. We estimated that the rocket would need to travel at 3 to 5 inches per second for desired gameplay, prompting the selection of our DC motor and driving method. Inspired by other gantry designs like 3d printers, we decided to use a large lead screw for vertical motion, hoping it would add not only significant torque but also rigidity, guiding the rocket upwards. Conventional lead screws proved too slow to drive the system, necessitating the use of a ACME fast-threaded lead screw. Identifying the lead screw with the best balance of cost and speed, as well as a DC motor with an integrated gearbox, we found a vertical motion solution that balanced power and speed. Adapting the lead screw to the motor was a slight roadblock as well, as shaft-to-shaft adapters were universally expensive, or for our needed metric-to-English adapters, nearly impossible to find. Instead, we machined our own shaft adapter with scrap aluminum stock, integrating the lead screw with the driving motor.</p>
 											</div>
 										</div>
-										<!-- <div class=""> -->
-											<h4 class="major">Introduction</h4>
-											<p><!-- <span class="image left"><img src="images/pic01.jpg" alt="" /></span> -->Much of the challenge in creating Space Origin: X was found in transforming the software model of a flying rocket into a controlled mechanical space. The core gameplay of Space Origin: X revolves around translating a rocket across a large two dimensional space, with a third degree of freedom of rocket rotation. Given the desired size of the game, this vertical gantry needed to translate the rocket across an area roughly four feet tall by three feet wide, with 90 degrees of rocket rotation in either direction. The mechanical system further serves as a platform for the electronics, integrating the power supply, microcontrollers, LEDs, wiring, and other essential electrical features in one compact package. As inspired by Elon Musk and SpaceX, our rocket lands on a floating barge rather than Lunar Lander’s traditional moon. This barge is replicated with a single degree of freedom moving platform capable of sensing rocket impact across its full travel. To create the interactive gaming experience of a lifetime, the team tied together the various mechanical and electrical components in a stylized game cabinet, inspired by the “wooden box” aesthetic popularized by warehouses worldwide.</p>
+										<br>
+										<div class="row">
+											<div class="8u">
+												<p>When we actually purchased our 6 foot long, ⅜” diameter lead screw, however, we found that it was impressibly flexible, actively detracting from the rigidity of our system. The traditional solution for gantry rigidity, linear guide rails, were too expensive for full vertical travel, so we looked to other solutions instead. Looking at spring-loaded rubber wheels in MDF tracks, 3d-printed PLA sliders, and Openrail V-wheels, we finally settled on machined delrin sliders in 80-20, relying on machined components for their reliability and dimensional tolerances. By sliding directly in our 80-20 frame, we avoided additional system complexity with direct gantry integration. We constructed a vertically mobile crossbar from MDF to span the game width and connect the sliders, with a 3d-printed threaded rod nut and bushing to interface with the threaded rod.</p>
+											</div>
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/MOTOR1.PNG" alt="DC motor mount"></div>
+												<div class="12u"><img class="image fit" src="images/SLIDER2.PNG" alt="Vertical axis slider"></div>
+											</div>
+										</div>
+										<br>
+										<!-- <img class="image left" src="images/comms_i2c_example.jpg"> -->
+										<div class="row">
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/ENERGON2.jpg" alt="Vertical axis energy chain"></div>
+											</div>
+											<div class="8u">
+												<p>The crossbar was connected via Energy Chain to the bottom of the frame, allowing consistent wire routing through the full range of motion of the system. To avoid driving the system into the ceiling or floor of the game, we also integrated limit switches into the frame, detecting when the linear sliders reached below the barge or close to the game’s upper limits. Mounting directly to the 80-20 with standard tee nuts, the stops could be repositioned for testing purposes or iterations in barge designs.</p>
+											</div>
+										</div>
+										<br>
 										<!-- </div> -->
 										<!-- <br> -->
-										<!-- <div class=""> -->
-											<h4 class="major">Vertical Motion</h4>
-											<p><!-- <span class="image right"><img src="images/pic02.jpg" alt="" /></span> -->The greatest mechanical challenge in Space Origin: X, the mechanical system for vertical rocket motion proceeded through several iterations before the final designs were chosen. Immediate design requirements identified for the system included vertical travel speed, rigidity, and load capacity. To promote the gameplay we wanted, the rocket needed to be capable of falling at significant speeds, necessitating components that could provide quick linear motion. However, given our limited budget and size constraints, any moving vertical system would need to be lightweight for ease of motion. With a single actuator at one end of the gantry providing all power for the system, added resistance across the four feet of travel would make moving the rocket up and down especially difficult. Finally, motion needed to remain rigidly confined and smooth across the full travel of the system, particularly near the barge. Irregular motion would eliminate immersiveness in the game, highlighting mechanical flaws instead of enveloping players in the Space Origin: X universe. Furthermore, the win condition and core gameplay relies on fine control of rocket position, landing it at a specified angle and velocity. A wobbly system would cause inconsistent gameplay when landing, forcing unfair losses or granting undeserved wins, ruining the player experience.</p>
-											<p>With an initial supply of small NEMA 17 stepper motors, we ran quick calculations to identify maximum speed and carrying capacities, but found that our stepper would not be sufficient for the speed of motion desired. We quickly identified a DC motor as the easiest option to balance cost with performance, easily producing the speeds needed to drive the rocket vertically. We estimated that the rocket would need to travel at 3 to 5 inches per second for desired gameplay, prompting the selection of our DC motor and driving method. Inspired by other gantry designs like 3d printers, we decided to use a large lead screw for vertical motion, hoping it would add not only significant torque but also rigidity, guiding the rocket upwards. Conventional lead screws proved too slow to drive the system, necessitating the use of a ACME fast-threaded lead screw. Identifying the lead screw with the best balance of cost and speed, as well as a DC motor with an integrated gearbox, we found a vertical motion solution that balanced power and speed. Adapting the lead screw to the motor was a slight roadblock as well, as shaft-to-shaft adapters were universally expensive, or for our needed metric-to-English adapters, nearly impossible to find. Instead, we machined our own shaft adapter with scrap aluminum stock, integrating the lead screw with the driving motor.</p>
-											<p>When we actually purchased our 6 foot long, ⅜” diameter lead screw, however, we found that it was impressibly flexible, actively detracting from the rigidity of our system. The traditional solution for gantry rigidity, linear guide rails, were too expensive for full vertical travel, so we looked to other solutions instead. Looking at spring-loaded rubber wheels in MDF tracks, 3d-printed PLA sliders, and Openrail V-wheels, we finally settled on machined delrin sliders in 80-20, relying on machined components for their reliability and dimensional tolerances. By sliding directly in our 80-20 frame, we avoided additional system complexity with direct gantry integration. We constructed a vertically mobile crossbar from MDF to span the game width and connect the sliders, with a 3d-printed threaded rod nut and bushing to interface with the threaded rod.</p>
-											<p>The crossbar was connected via Energy Chain to the bottom of the frame, allowing consistent wire routing through the full range of motion of the system. To avoid driving the system into the ceiling or floor of the game, we also integrated limit switches into the frame, detecting when the linear sliders reached below the barge or close to the game’s upper limits. Mounting directly to the 80-20 with standard tee nuts, the stops could be repositioned for testing purposes or iterations in barge designs.</p>
-										<!-- </div> -->
+										<h2 class="major">Horizontal Motion</h2>
+										<div class="row">
+											<div class="8u">
+												<p>Unlike the vertical rocket motion, producing horizontal rocket travel proved easy to handle with the actuators available on hand. Carrying the load of a mini servo and the rocket itself, the stepper needed to produce minimal torque for functionality, and the limited x-dimension travel inherent in gameplay also limited the speeds required of the stepper. With the smaller range of motion of our game’s x-direction, we could afford linear guide rails to support the rocket across horizontal travel, especially important given the flexibility of our timing belt. A simple 3d-printed part slid on both rails and attached to the timing belt, producing our x-axis motion. This belt and the asymmetric load of the stepper tended to flex the MDF crossbar, leading to the addition of a stiffening vertical rail.</p>										
+											</div>
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/SLIDER1.PNG" alt="Horizontal axis slider" /></div>
+											</div>
+										</div>
 										<!-- <br> -->
-										<h4 class="major">Horizontal Motion</h4>
-										<p><!-- <span class="image right"><img src="images/pic03.jpg" alt="" /> --></span>Unlike the vertical rocket motion, producing horizontal rocket travel proved easy to handle with the actuators available on hand. Carrying the load of a mini servo and the rocket itself, the stepper needed to produce minimal torque for functionality, and the limited x-dimension travel inherent in gameplay also limited the speeds required of the stepper. With the smaller range of motion of our game’s x-direction, we could afford linear guide rails to support the rocket across horizontal travel, especially important given the flexibility of our timing belt. A simple 3d-printed part slid on both rails and attached to the timing belt, producing our x-axis motion. This belt and the asymmetric load of the stepper tended to flex the MDF crossbar, leading to the addition of a stiffening vertical rail.</p>
-										<p>We attached a mini servo with a 3d-printed rocket to the horizontal slider, producing our rotation degree of freedom. Due to the diminishing loads on each degree of freedom, we could turn the rocket with minimal power requirements. An LED attached to the rocket provided a visual indicator of thrust, producing feedback on player application of thrust. As with the vertical motion, travelling servos necessitated proper wire routing, leading to our use of 3d-printed knockoff Energy Chain to carry the LED and mini servo wires. End stops on either end of the linear rails stopped the rocket from sliding to either end of the system, and all wiring from the crossbar ran through down through the original vertical Energy Chain to connect to the electronics panel on the game base.</p>
+										<div class="row">
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/ENERGON1.jpg" alt="Horizontal axis slider" /></div>
+											</div>
+											<div class="8u">
+												<p>We attached a mini servo with a 3d-printed rocket to the horizontal slider, producing our rotation degree of freedom. Due to the diminishing loads on each degree of freedom, we could turn the rocket with minimal power requirements. An LED attached to the rocket provided a visual indicator of thrust, producing feedback on player application of thrust. As with the vertical motion, travelling servos necessitated proper wire routing, leading to our use of 3d-printed knockoff Energy Chain to carry the LED and mini servo wires. End stops on either end of the linear rails stopped the rocket from sliding to either end of the system, and all wiring from the crossbar ran through down through the original vertical Energy Chain to connect to the electronics panel on the game base.</p>
+											</div>
+										</div>
 										<!-- <br> -->
-										<h4 class="major" >Barge</h4>
-										<p>As originally planned, the horizontal motion of the barge presented few issues. Using the same stepper-driven horizontal motion as the rocket, we constructed a nearly identical system to drive a 3d-printed barge with timing belt. Mounted close to the electronics panel, wiring also presented few issues. Much like the actual SpaceX, the barge had difficulty stably supporting a landing rocket, caused by the landing detection system. We decided to accept landing anywhere on the barge as a successful impact, turning the entire barge surface into a landing pad. We split the barge into an upper surface and main body, with rocket impacts anywhere pressing the landing pad onto a limit switch attached to the main barge body. LEDs attached to the barge presented user feedback about the gamestate and fit thematically with the universe, with electrical tape to damp the lighting glare.</p>
-										<p>We ran into a few issues tuning the barge landing detection, given the gameplay of Space Origin: X. Players are expected to land the rocket at vertical speeds as close to zero as possible, making more successful landings more difficult to detect. The barge limit switch needed to barely support the weight of the landing pad, collapsing under any further weight but returning the pad upon takeoff. We tuned this spring response by adding additional springs to a heavy landing pad, although the current barge can require some additional force to press, likely due to the force of the landing rocket displacing water under the floating barge.</p>
+										<h2 class="major" >Barge</h2>
+										<!-- <div class="row"> -->
+											<div class="12u row uniform">
+												<div class="12u"><img class="image fit" src="images/BARGE1.jpg" alt="Track for moving barge" /></div>
+											</div>
+											<br>
+											<!-- <div class="12u"> -->
+											<p>As originally planned, the horizontal motion of the barge presented few issues. Using the same stepper-driven horizontal motion as the rocket, we constructed a nearly identical system to drive a 3d-printed barge with timing belt. Mounted close to the electronics panel, wiring also presented few issues. Much like the actual SpaceX, the barge had difficulty stably supporting a landing rocket, caused by the landing detection system. We decided to accept landing anywhere on the barge as a successful impact, turning the entire barge surface into a landing pad. We split the barge into an upper surface and main body, with rocket impacts anywhere pressing the landing pad onto a limit switch attached to the main barge body. LEDs attached to the barge presented user feedback about the gamestate and fit thematically with the universe, with electrical tape to damp the lighting glare.</p>	
+<!-- 											</div>
+										</div> -->
+										<div class="row">
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/BARGE2.JPG" alt="Illuminated complete two-part barge" /></div>
+											</div>
+											<div class="8u">
+												<p>We ran into a few issues tuning the barge landing detection, given the gameplay of Space Origin: X. Players are expected to land the rocket at vertical speeds as close to zero as possible, making more successful landings more difficult to detect. The barge limit switch needed to barely support the weight of the landing pad, collapsing under any further weight but returning the pad upon takeoff. We tuned this spring response by adding additional springs to a heavy landing pad, although the current barge can require some additional force to press, likely due to the force of the landing rocket displacing water under the floating barge.</p>
+											</div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><img class="image fit" src="images/BARGE3.jpg" alt="Barge spring-supported landing pad" /></div>
+										</div>
+										<br>
 										<!-- <br> -->
-										<h4 class="major">Cabinet</h4>
-										<p>With the three main dynamic mechanical systems functional, the entire cabinet needed to integrate all electrical systems, hide undesired components, and present a visually appealing game. Starting with an 80-20 box frame, we integrated the vertical and horizontal axes of motion off two vertical rails, with a small MDF floorboard to mount the DC motor. We further created an MDF roof to cap the game and provide an upper bearing to support the lead screw, mitigating some of its bending for more consistent gameplay. Using the 80-20 presented opportunities for easy integration of various mechanical elements, using tee nuts and 5/16”-18 hardware to attach wooden boards, sensors, and wire routing components.</p>
+										<h2 class="major">Cabinet</h2>
+										<div class="row">
+											<div class="4u row uniform">
+												<div class="12u"><img class="image fit" src="images/FAB1.jpg" alt="Assembly of cabinet over 80-20 frame" /></div>
+											</div>
+											<div class="8u">
+												<p>With the three main dynamic mechanical systems functional, the entire cabinet needed to integrate all electrical systems, hide undesired components, and present a visually appealing game. Starting with an 80-20 box frame, we integrated the vertical and horizontal axes of motion off two vertical rails, with a small MDF floorboard to mount the DC motor. We further created an MDF roof to cap the game and provide an upper bearing to support the lead screw, mitigating some of its bending for more consistent gameplay. Using the 80-20 presented opportunities for easy integration of various mechanical elements, using tee nuts and 5/16”-18 hardware to attach wooden boards, sensors, and wire routing components.</p>
+											</div>
+										</div>
+										<br>
 										<p>Using the 80-20 slots and the base of the box, we then produced mounts for the main electronics board and power supply, covered in more detail in the electronics section. This organized hardware hub lay safely at the bottom of the game, obscured by the barge mounting panels to preserve the appearance of the game. Hiding loose wiring created a polished aesthetic appeal to the game, isolating only the desired mobile elements instead of the background electronics needed to make them functional. Mounting the barge over the electronics aligned it with the rocket’s natural positioning, allowing it to land cleanly in the center of the barge.</p>
+										<br>
+										<div class="row uniform">
+											<div class="2u"></div>
+											<div class="4u"><img class="image fit" src="images/UI_fuel.png" alt="Fuel indicator" /></div>
+											<div class="4u"><img class="image fit" src="images/UI_speed.png" alt="Speed indicator" /></div>
+											<div class="2u"></div>
+											<div class="4u"></div>
+											<div class="4u"><img class="image fit" src="images/UI_lives.png" alt="Lives indicator" / ></div>
+
+										</div>
+										<br>
 										<p>The control panel on the front of the game provided the final functional game element, with both feedback indicators and game controls. We used a stock joystick and button for our user interface, relying on the designed spring feedback and button feel to present a comfortable player input. These were mounted to an MDF control panel extending in front of the game, along with dual servo dials for vertical speed and fuel. The pair of dials allow for both essential gameplay feedback and added complexity and challenge. The indicator for rocket fuel allows the player to plan their landing approach, clearly demonstrating their available resources and forcing strategic play. The other indicator for vertical speed clearly indicates the acceptable range for landing speeds, letting the player know when it is safe to land the rocket. Players must balance watching the dials with observing the rocket and barge, ensuring they land in the correct place at the correct time, have enough fuel for their landing approach, and reach at the desired speed.</p>
+										<br>
+										<div class="row uniform">
+											<div class="2u"></div>
+											<div class="4u"><img class="image fit" src="images/UI_throttle.png" alt="Throttle button" /></div>
+											<div class="4u"><img class="image fit" src="images/UI_tilt.png" alt="Tilt interface"/></div>
+											<div class="2u"></div>
+											<!-- <div class="3u"></div> -->
+											<div class="12u"><img class="image fit" src="images/CONTROLS1.jpg" alt="Control panel"/></div>
+										</div>
+										<br>
 										<p>To present a coherent game universe and finished product, we first decided on a primarily black color scheme, themed after space obviously. We created MDF and hardboard wooden panels on the sides of the game to match the top and control panel, painting them all with black spray paint. The paint provided an ideal surface for vinyl cut decals as well, styled after the very original Space Origin: X logo. Two large decals on opposing sides of the game draw the attention of viewers, while labels for indicators and controls thrust the player into the role of a fictional movie rocket pilot. Tasteful uses of color highlight the acceptable vertical speed for landing success and the imminent loss of fuel reserves. Inside the cabinet, the black walls create a dark gameplay environment, recalling childhood memories of astronaut dreams playing outside at night. A single white rocket with an illuminating thrust LED pierces the dark backdrop, easily drawing the player’s attention. We chose to leave some mechanisms of the vertical gantry uncovered, inspired by the mechanical clarity of old pinball and claw machines. Black vinyl fabric obscured the complex geometries of the bottom rear of the game as well as the actuators for horizontal rocket motion, items with bright colors that would draw the attention away from the white rocket and barge. To further highlight the barge, the gantry crossbar is painted black as well. Finally, the electronics covering and barge support are painted glossy blue, reflecting the lighted rocket landing as water might, and adding some color contrast from the all-black cabinet.</p>
+										<div class="row uniform">
+											<div class="12u"><img class="image fit" src="images/FULL1.png" alt="Control panel"/></div>
+										</div>
 									</section>
 
 								</div>
